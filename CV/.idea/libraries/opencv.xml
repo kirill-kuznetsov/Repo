@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="opencv">
+    <CLASSES>
+      <root url="jar://C:/JavaCV/opencv.jar!/" />
+      <root url="jar://C:/JavaCV/ffmpeg.jar!/" />
+      <root url="jar://C:/JavaCV/javacv.jar!/" />
+      <root url="jar://C:/JavaCV/javacpp.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
