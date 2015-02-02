@@ -85,23 +85,14 @@ public class Tester {
         // Create new JavaCV list
         DMatch best = new DMatch(size);
         for (int i = 0; i < size; i++) {
-            // Since there is no may to `put` objects into a list DMatch,
-            // We have to reassign all values individually, and hope that API
-            // will not any new ones.
             copy(aSorted[i], best.position(i));
         }
-
-        // Set position to 0 explicitly to avoid issues from other uses of this
-        // position-based container.
         best.position(0);
 
         return best;
     }
 
     private static void copy(DMatch src, DMatch dest) {
-        // TODO: use Pointer.copy() after JavaCV/JavaCPP 0.3 is released
-        // (http://code.google.com/p/javacpp/source/detail?r=51f4daa13d618c6bd6a5556ff2096d0e834638cc)
-        // dest.put(src)
         dest.distance(src.distance());
         dest.imgIdx(src.imgIdx());
         dest.queryIdx(src.queryIdx());
